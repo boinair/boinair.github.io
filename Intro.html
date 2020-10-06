@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<head>
+  <link rel="icon" href="icon.png" type="image/png" sizes="16x16">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;500;700&display=swap" rel="stylesheet">   
+<style>
+body {
+        background-color: white;
+}
+    
+.welcome{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+       
+}
+    
+.center{
+        margin: 0;
+        position:fixed;
+        top: 45%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 10;
+}
+    
+.centerVideo{
+
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%,-50%);
+        display: none;
+        height: 100%;
+        width: auto;
+        margin: 0 auto;
+        z-index: 9;
+}
+
+.blackGround{
+        position:fixed;
+        height:100vh;
+        width:100vw;
+        background-color: black;
+        display: block;
+        z-index: 8;
+    }
+    
+    
+* {
+        margin: 0;   
+    }
+
+.gradient{ position:fixed;
+        height:100vh;
+        width:100vw;
+      
+        display: block;
+        z-index: 1;
+        background-image: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1), rgba(255,0,0,0),rgba(255,0,0,0),rgba(255,0,0,0),rgba(255,0,0,0),rgba(255,0,0,0), rgba(255,0,0,0), rgba(255,0,0,0),rgba(255,255,255,1),rgba(255,255,255,1), rgba(255,255,255,1));
+    
+    }
+    
+.logoFeet{
+    
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%,-50%);
+        display: none;
+        height: 100%;
+        width: auto;
+        margin: 0 auto;
+        z-index: 4;
+    }
+.card {
+        padding-top: 5vh;
+        display: block;
+        margin: auto;
+        text-align: center;
+        font-size: 2vh;
+        padding-bottom: 10vh;
+    
+}
+    .card img{
+        width: 40vh;
+}
+    .products{
+        padding-top: 10.5vmax;
+        padding-bottom: 25vh;}
+       
+    .price{
+        font-family: 'Source Code Pro', monospace;
+        font-weight:500;
+    }
+    .productName{padding-top: 2vh;
+        font-family: 'Source Code Pro', monospace;
+        font-weight:700;
+    }
+    .info{
+        font-family: 'Source Code Pro', monospace;
+        font-weight:300;
+    }
+    .releases>a:link {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    .releases>a:visited {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+}
+    .releases>a:hover {
+        color: black;
+        background-color: transparent;
+        text-decoration: underline;
+}
+    .releases>a:active {
+        color: black;
+        background-color: transparent;
+        text-decoration: underline;
+}
+    .container{
+        text-align: center;
+        font-family: 'Source Code Pro', monospace;
+        font-weight:300;
+        width:100vw;
+        padding-top:3vh;
+        position: fixed;
+        z-index:5;
+        top: 0;
+        display: inline-flex;
+        font-size: 1.5vh;
+        padding-right: 1vw;
+    
+    }
+    .container>div{
+        width: 33.3%;
+        display: inline-block;
+    }
+    .releases{ 
+        color: black;
+    }
+    
+    .finalSales{
+        text-align: center;
+        color: lightgray;
+    }
+    .cart>img{
+        height: 4vh;
+    }
+</style>
+
+<body>
+    <!Intro Video that plays after you enter holocene>
+    
+    <video class ="centerVideo" id ="centerVid"src= "CroppedVideo.mp4" height="100%" playsinline  muted>
+            </video>
+    <!Image to click to enter holocene>
+    <div class = "center">
+        <img class="welcome" src = "IntroWelcome.png" width = 80% onclick="enterHolocene()">
+    </div>
+    <div class="blackGround"></div>
+ <!Transperant Image including bottom Logo>    
+<div class="logoFeet">
+    <img src="onlyLogo.png" height="100%" >
+    </div>
+    <div>
+    </div>
+<div class ="gradient">
+    </div>
+    <!Products>
+    <div class="products">
+        <!Tshirt>
+<div class="card">
+  <img src="tee.jpg">
+    <p>                                 </p>
+        <p class="productName">Skatin' in the Dark Tee</p>
+        <p class="price">Rs.2000</p>
+        <p class="info">Glow in the Dark Print</p>
+        <p class="info">Fits Loose</p>
+        <p class="info">100% Recycled Cotton</p>
+</div>
+<div class="card">
+  <img src="tee2.jpg">
+    <p>                                 </p>
+        <p class="productName">Water 'em roots</p>
+        <p class="price">Rs.2000</p>
+        <p class="info">Puffed Print</p>
+        <p class="info">Fits Loose</p>
+        <p class="info">100% Recycled Cotton</p>
+</div>
+</div>
+   <!Header including Releases and Cart> 
+<div class="container" id="header">
+ <!Need to include hyperlink as well as pointer interactivity>    
+<div class="releases"><a href="www.google.com" target="_blank">
+releases</a></div>
+ <!on hover needs to turn black>    
+<div class="finalSales">
+all sales are final</div>
+ <!either needs to update or change if something is added>    
+<div class="cart"><a class="cart" href="google.com" target="_blank">
+<img src="cart.png" ></a>
+</div>
+    
+</div>    
+</body>
+    
+    
+<script>
+var video = document.getElementById('centerVid');
+
+function enterHolocene(){ 
+ $(document).ready(function(){
+    $(".welcome").fadeOut(1000)
+ });
+videoEnter();
+}
+function videoEnter(){
+    video.play();
+     $(document).ready(function(){
+    $(".centerVideo").fadeIn(3000)
+ });
+
+setTimeout(function(){backScreen()},10000);
+} 
+function backScreen(){
+ $(document).ready(function(){
+    $(".centerVideo").fadeOut(1500)
+ });
+$(document).ready(function(){
+    $(".logoFeet").fadeIn(500)
+ });
+setTimeout(function(){blackScreen()},700);
+}
+    
+function blackScreen(){
+ $(document).ready(function(){
+    $(".blackGround").fadeOut(3000)   
+ });
+document.body.scrollTop=0;
+document.documentElement.scrollTop=0;
+setTimeout(function(){productsTurnUp()},1000);
+}
+function productsTurnUp(){
+
+ $(document).ready(function(){
+    $(".products").fadeIn(000)    
+ })   
+    
+}
+</script>
+    
+</html>
