@@ -263,7 +263,8 @@ function blackScreen(){
  });
 
  window.scrollTo(0,document.body.scrollHeight);
-
+document.body.scrollTop=0;
+document.documentElement.scrollTop=0;
 setTimeout(function(){productsTurnUp()},1000);
 }
 function productsTurnUp(){
