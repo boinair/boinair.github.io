@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <head>
   <link rel="icon" href="icon.png" type="image/png" sizes="16x16">
@@ -296,6 +297,7 @@ var video = document.getElementById('centerVid');
 
 function enterHolocene(){ 
  $(document).ready(function(){
+   setTimeout(function() { window.scrollTo(0, 1) }, 100);
     $(".welcome").fadeOut(1000)
  });
 window.scrollTo(0,document.body.scrollHeight);
